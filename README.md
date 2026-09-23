@@ -44,10 +44,3 @@ To run this project locally, simply follow these steps:
 4. **Preview the app:**
    Open [http://localhost:3000](http://localhost:3000) in your browser. You can use the top black demo banner to toggle between the different delivery states.
 
-## 📁 Git Workflow & Architecture
-
-This repository was meticulously built using a clean Git workflow, containing **10 distinct logical commits** tracking the component-by-component construction of the application (plus a few minor fixes/polishes):
-- `Commit 1 to 2`: Project Initialization and shadcn/ui setup.
-- `Commit 3 to 6`: Building core isolated components (`Header`, `OrderTimeline`, `ProductSummary`, `SupportActions`).
-- `Commit 7 to 9`: Integrating the logic for all required edge-cases (Delayed, Not Received, Not Available).
-- `Commit 10`: Final assembly of the main page and interactive testing wrapper.
