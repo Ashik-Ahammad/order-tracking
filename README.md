@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 Mobile Order Tracking Screen
 
-## Getting Started
+A modern, professional mobile Order Tracking interface built for an e-commerce application. This project completely redesigns the standard tracking experience so that the delivery status is instantly clear at a glance.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Clear Visual Delivery Timeline**: An intuitive progress bar that adapts based on the current order status (Processing, Shipped, Out for Delivery, Delivered).
+- **Edge Case Handling**: Dynamically adapts to three specific real-world situations:
+  - ⏳ **Delayed Order**: Clearly communicates the delay and provides a dedicated alert.
+  - 🚨 **Delivered but Not Received**: Alerts the user when the system marks an item as delivered but it hasn't been received, offering an immediate "Report an Issue" action.
+  - 🔍 **Tracking Not Available**: Gracefully handles states where the order exists but the tracking information is not yet available from the carrier.
+- **Interactive Demo**: Includes an interactive sticky tab bar at the top of the application to seamlessly toggle between the different edge cases (`Normal`, `Delayed`, `Issue`, `No Track`).
+- **Fully Responsive Mobile Constraint**: The layout is meticulously constrained for standard mobile viewports (`360-430px`) to provide an exact mobile-app feel on all devices.
+- **Clean Architecture**: Highly modular, reusable, and built following strict React best practices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Setup & Run Instructions
 
-## Learn More
+To run this project locally, simply follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Ashik-Ahammad/order-tracking.git
+   cd order-tracking
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. **Preview the app:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser. You can use the top black demo banner to toggle between the different delivery states.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Git Workflow & Architecture
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This repository was meticulously built using a clean Git workflow, containing **10 distinct logical commits** tracking the component-by-component construction of the application (plus a few minor fixes/polishes):
+- `Commit 1 to 2`: Project Initialization and shadcn/ui setup.
+- `Commit 3 to 6`: Building core isolated components (`Header`, `OrderTimeline`, `ProductSummary`, `SupportActions`).
+- `Commit 7 to 9`: Integrating the logic for all required edge-cases (Delayed, Not Received, Not Available).
+- `Commit 10`: Final assembly of the main page and interactive testing wrapper.
